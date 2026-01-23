@@ -1,0 +1,20 @@
+---
+import { drizzle } from "drizzle-orm/d1";
+import { eq, desc } from "drizzle-orm";
+import CommentItem from "./CommentItem.astro";
+import { commentsTable } from "../../tables/comment";
+
+const { postSlug, class: className, ...props } = Astro.props;
+
+const db = drizzle(Astro.locals.runtime.env.DB);
+
+const comments = await db
+  .select()
+  .from(commentsTable)
+  .where(eq(commentsTable.post_slug, postSlug))
+  .orderBy(desc(commentsTable.created_at));
+---
+
+<div class="comments-list flex flex-col gap-4">
+  {comments.map((comment) => <CommentItem comment={comment} />)}
+</div>

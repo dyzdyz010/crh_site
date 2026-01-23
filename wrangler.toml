@@ -1,0 +1,18 @@
+name = "chenranhao"
+account_id = "8bafdbd1f2d967917dbc0a67156266fa"
+compatibility_date = "2025-04-28"
+compatibility_flags = ["nodejs_compat"]
+main = "dist/_worker.js/index.js"
+
+[assets]
+directory = "./dist"
+
+# [[d1_databases]]
+# binding = "DB"                  # 代码里用 env.DB 访问
+# database_name = "blog-ugc"
+# database_id = "fc8ede2f-f73f-454a-a55b-4187a8ced702"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "chenranhao"
+database_id = "4eed69c7-b3d5-4b41-8984-55359a1b326a"

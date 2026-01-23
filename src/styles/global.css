@@ -1,0 +1,95 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+@import "./variables.css";
+@import "./typography.css";
+
+html.dark .theme-dark {
+  display: none;
+}
+html:not(.dark) .theme-light {
+  display: none;
+}
+
+.theme-light,
+.theme-dark {
+  @apply cursor-pointer hover:text-[var(--color-accent)];
+  /* @apply transition-colors duration-100; */
+}
+
+body {
+  --vp-font-family-base: "Inter Variable", "Inter", "Noto Sans SC",
+    "PingFang SC", "Microsoft Yahei", ui-sans-serif, system-ui, sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --vp-font-family-mono: "Menlo", "Monaco", "Consolas", "Liberation Mono",
+    "Courier New", ui-monospace, monospace;
+
+  font-family: var(--vp-font-family-base);
+  margin: 0;
+  padding: 0;
+  text-align: justify;
+  @apply bg-[var(--color-bg)];
+  @apply text-[var(--color-default)];
+  background-size: 100% 600px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  line-height: 1.7;
+}
+
+input, textarea {
+  @apply border border-[var(--color-glass-border)] focus:outline-none;
+  @apply rounded-xl;
+}
+
+.header {
+  @apply pb-4;
+}
+
+.header nav {
+  @apply flex justify-between items-center p-4 gap-4;
+}
+
+.header nav h2.logo {
+  @apply italic text-xl font-bold p-0 m-0;
+}
+
+.header .internal-links {
+  @apply flex gap-6;
+
+  a {
+    @apply text-[var(--color-default)];
+    @apply hover:text-[var(--color-default-hover)];
+
+    &.active {
+      @apply text-[var(--color-accent)] decoration-2;
+      @apply hover:text-[var(--color-accent-hover)];
+    }
+  }
+}
+
+.header .social-links,
+footer .social-links {
+  @apply flex gap-4 items-center justify-end;
+}
+
+.posts {
+  @apply grid grid-cols-1 gap-4;
+}
+
+.post {
+  @apply border-l-2 border-l-[var(--color-accent)] pl-4;
+}
+
+/* footer .social-links .icon:hover {
+  @apply text-white;
+} */
+
+hr {
+  /* margin-bottom: 0.5em; */
+  @apply mb-2!;
+  /* border-top-color: var(--color-border); */
+  @apply border-1 border-l-0 border-r-0 border-b-0 border-t-[var(--color-border)]!;
+}
+
+.bg-secondary {
+  background-color: color-mix(in oklab, #7b888e 10%, transparent);
+}

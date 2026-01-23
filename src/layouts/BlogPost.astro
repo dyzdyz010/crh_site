@@ -1,0 +1,59 @@
+---
+import type { CollectionEntry } from "astro:content";
+import "../styles/global.css";
+import "../styles/article.css";
+import "../styles/comments.css";
+import "../styles/code.css";
+import FormattedDate from "../components/FormattedDate.astro";
+import RootLayout from "./RootLayout.astro";
+import Tags from "../components/Tags.astro";
+import BackToTop from "../components/BackToTop.astro";
+import Comments from "../components/comment/Comments.astro";
+import Card from "../components/Card.astro";
+
+interface IdExt {
+  id: string;
+}
+
+type Props = CollectionEntry<"blog">["data"] & (IdExt | { id: false });
+
+const { id, title, description, date, updatedDate, tags, author, ...rest } =
+  Astro.props;
+// console.log("post id", Astro.props);
+---
+
+<RootLayout>
+  <div class="flex flex-col items-stretch gap-8">
+    <Card>
+      <article id={id || ""}>
+        <div class="prose">
+          <section class="title" aria-label="Title">
+            <div class="annotation">
+              <div class="date">
+                <FormattedDate date={date} />
+                {
+                  updatedDate && (
+                    <>
+                      <span class="last-updated-on">
+                        , Last updated on{" "}
+                        <FormattedDate date={updatedDate || date} />
+                      </span>
+                    </>
+                  )
+                }
+              </div>
+            </div>
+            <h1>{title}</h1>
+            <hr />
+          </section>
+          <slot />
+          <Tags tags={tags ?? []} class="mt-10" />
+        </div>
+      </article>
+    </Card>
+    <Card>
+      <Comments server:defer postSlug={id} class="mt-2" />
+    </Card>
+  </div>
+  <BackToTop />
+</RootLayout>
