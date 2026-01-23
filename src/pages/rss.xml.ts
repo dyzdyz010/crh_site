@@ -25,8 +25,8 @@ export async function GET(context: APIContext) {
     fromCollection("blog", "article", "/"),
   ]);
   return rss({
-    title: "Wonderland",
-    description: "Yizhuo's PersonalBlog",
+    title: "Chen Ranhao",
+    description: "Chen Ranhao's PersonalBlog",
     site: context.site,
     items: items.flat(),
   });
