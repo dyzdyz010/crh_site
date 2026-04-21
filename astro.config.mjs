@@ -10,7 +10,7 @@ import cloudflare from "@astrojs/cloudflare";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://dyz.io",
+  site: "https://chenranhao.com",
   output: "server",
 
   integrations: [
