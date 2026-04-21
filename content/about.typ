@@ -1,8 +1,8 @@
 = About Myself
 
-I'm Chen Ranhao, a _systems architect_ and a _full-stack developer_.
+I'm WhiteRaven, a _systems architect_ and a _full-stack developer_.
 
-我是dyzdyz010，一个系统架构师和全栈开发者。
+我是 WhiteRaven，一个系统架构师和全栈开发者。
 
 = About This Site
 
