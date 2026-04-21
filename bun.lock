@@ -3,7 +3,7 @@
   "configVersion": 0,
   "workspaces": {
     "": {
-      "name": "chenranhao",
+      "name": "whiteraven",
       "dependencies": {
         "@astrojs/cloudflare": "^12.6.6",
         "@astrojs/rss": "^4.0.12",

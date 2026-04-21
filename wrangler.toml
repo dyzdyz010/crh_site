@@ -1,4 +1,4 @@
-name = "chenranhao"
+name = "whiteraven"
 account_id = "8bafdbd1f2d967917dbc0a67156266fa"
 compatibility_date = "2025-04-28"
 compatibility_flags = ["nodejs_compat"]
@@ -14,5 +14,5 @@ directory = "./dist"
 
 [[d1_databases]]
 binding = "DB"
-database_name = "chenranhao"
+database_name = "whiteraven"
 database_id = "4eed69c7-b3d5-4b41-8984-55359a1b326a"

@@ -1,5 +1,5 @@
 {
-  "name": "chenranhao",
+  "name": "whiteraven",
   "type": "module",
   "version": "0.0.1",
   "scripts": {
@@ -7,7 +7,7 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "db:reset": "wrangler d1 execute chenranhao --local --file=./migrations/0001_init.sql"
+    "db:reset": "wrangler d1 execute DB --local --file=./migrations/0001_init.sql"
   },
   "dependencies": {
     "@astrojs/cloudflare": "^12.6.6",
