@@ -126,7 +126,7 @@
   desc: [This is a blog post.],
   date: "2024-08-15",
   tags: (),
-  collection: "SomeCollection",
+  collection: "Blog",
   kind: "post",
   lang: none,
   region: none,
@@ -155,6 +155,7 @@
     description: plain-text(desc),
     date: date,
     tags: tags,
+    collection: plain-text(collection),
     lang: lang,
     region: region,
   )) <frontmatter>]

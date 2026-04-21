@@ -16,11 +16,19 @@
   ue5: "UE5",
   protobuf: "Protobuf",
   cloudflare: "Cloudflare",
+  ai: "AI",
   astro: "Astro",
   blog: "Blog",
+  creator: "Creator",
+  design: "Design",
+  tech: "Tech",
   theme: "Theme",
+  toy: "Toy",
+  puzzle: "Puzzle",
   vue: "Vue",
   vitepress: "Vitepress",
+  vision-pro: "Vision Pro",
+  writing: "Writing",
   mmo: "MMO",
   server: "Server",
   rust: "Rust",
@@ -39,10 +47,12 @@
   notion: "Notion",
   emacs: "Emacs",
   haskell: "Haskell",
+  xr: "XR",
 )
 
 #let blog-collections = (
   blog: "Blog",
+  essay: "Essay",
   project: "Project",
   note: "Note",
 )
