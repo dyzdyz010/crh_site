@@ -122,6 +122,7 @@
 
 #let shared-template(
   title: "Untitled",
+  author: "WhiteRaven",
   desc: [This is a blog post.],
   date: "2024-08-15",
   tags: (),
@@ -150,7 +151,7 @@
 
   [#metadata((
     title: plain-text(title),
-    author: "Myriad-Dreamin",
+    author: plain-text(author),
     description: plain-text(desc),
     date: date,
     tags: tags,
